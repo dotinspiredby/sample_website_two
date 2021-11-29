@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='base.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='login.css')}}">
+{% endblock %}
+
+{% block title %} Authorization · Artist Name {% endblock %}
+
+{% block content %}
+
+{% if notification %}
+<div class="alert alert-danger" role="alert">
+    {{notification}}
+</div>
+{% endif %}
+
+<h1 class="text"> Enter The System </h1>
+
+<div id="white_block">
+
+<form class="form-horizontal" method="post" action="">
+        {{ form.csrf_token() }}
+        <div class="form-group">
+            {{ form.login.label }}
+            {{ form.login(class="form-control", placeholder="") }}
+        </div>
+        <div class="form-group">
+            {{ form.password.label }}
+            {{ form.password(class="form-control", placeholder="") }}
+        </div>
+
+    <br>
+        <div id="button" class="form-group">
+            {{ form.submit(class="form-control btn")}}
+        </div>
+</form>
+
+</div>
+{% endblock %}

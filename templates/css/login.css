@@ -1,0 +1,21 @@
+
+h1 {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 5%;
+}
+
+form {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#button {
+    opacity: 70%;
+    background-color: #E6FFDA !important;
+    box-shadow: 5px 5px black;
+    border: 1px solid;
+    border-radius: 0 !important;
+    color: black !important;
+}

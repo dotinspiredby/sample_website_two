@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'jenriv_titlinglight';
+    src: url('webfonts/web_fonts_woff/jenriv/jenrivtitling-light-webfont.woff2') format('woff2'),
+         url('webfonts/web_fonts_woff/jenriv/jenrivtitling-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'jenriv_titlinglight_italic';
+    src: url('webfonts/web_fonts_woff/jenriv/jenrivtitling-lightitalic-webfont.woff2') format('woff2'),
+         url('webfonts/web_fonts_woff/jenriv/jenrivtitling-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'scriptinaregular';
+    src: url('webfonts/web_fonts_woff/scriptina/web_fonts/scriptina_regular/scriptina-webfont.eot');
+    src: url('webfonts/web_fonts_woff/scriptina/web_fonts/scriptina_regular/scriptina-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/web_fonts_woff/scriptina/web_fonts/scriptina_regular/scriptina-webfont.woff') format('woff'),
+         url('webfonts/web_fonts_woff/scriptina/web_fonts/scriptina_regular/scriptina-webfont.ttf') format('truetype'),
+         url('webfonts/web_fonts_woff/scriptina/web_fonts/scriptina_regular/scriptina-webfont.svg#scriptinaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-attachment: fixed !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+
+
+}
+
+.nav-link {
+    color: rgba(0,0,0,.55) !important;
+}
+
+a h3 {
+    font-family: 'scriptinaregular' !important;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'jenriv_titlinglight';
+}
+
+h2 {
+    font-size: 25px;
+    font-family: 'jenriv_titlinglight_italic';
+}
+
+li {
+    font-family: 'jenriv_titlinglight';
+    color: black !important;
+}
+
+#button {
+    opacity: 70%;
+    background-color: #E6FFDA !important;
+    box-shadow: 5px 5px black;
+    border: 1px solid;
+    border-radius: 0 !important;
+    color: black !important;
+    font-family: 'jenriv_titlinglight';
+}
+
+form {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-bottom: 6%;
+}
+
+.form-control {
+    border-radius: 0 !important;
+}
+
+#social li {
+    margin-left: 2rem;
+}
+
+.signature {
+    float: right;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, .9);
+
+}
+
+footer p {
+    font-family: 'jenriv_titlinglight';
+}
+
+#white_block, .white_block {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+footer a {
+    color: #6c757d!important;
+}
+
+p {
+    font-family: 'jenriv_titlinglight';
+    animation: slide-up;
+    animation-duration: 1s;
+}

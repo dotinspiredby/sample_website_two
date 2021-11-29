@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'jenriv_titlinglight';
+    src: url('webfonts/web_fonts_woff/jenriv/jenrivtitling-light-webfont.woff2') format('woff2'),
+         url('webfonts/web_fonts_woff/jenriv/jenrivtitling-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2 {
+    text-align: center;
+}
+
+.label {
+    font-family: 'jenriv_titlinglight';
+}
+
+h2, form, #white_block {
+    animation: slide-right;
+    animation-duration: 1s;
+}
+
+#white_block {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-500%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'cormorantmedium';
+    src: url('webfonts/web_fonts_woff/cormorant/web_fonts/cormorant_medium/Cormorant-Medium-webfont.eot');
+    src: url('webfonts/web_fonts_woff/cormorant/web_fonts/cormorant_medium/Cormorant-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('webfonts/web_fonts_woff/cormorant/web_fonts/cormorant_medium/Cormorant-Medium-webfont.woff') format('woff'),
+         url('webfonts/web_fonts_woff/cormorant/web_fonts/cormorant_medium/Cormorant-Medium-webfont.ttf') format('truetype'),
+         url('webfonts/web_fonts_woff/cormorant/web_fonts/cormorant_medium/Cormorant-Medium-webfont.svg#cormorantmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cormorantitalic';
+    src: url('webfonts/web_fonts_woff/cormorant/web_fonts/cormorant_italic/Cormorant-Italic-webfont.eot');
+    src: url('webfonts/web_fonts_woff/cormorant/web_fonts/cormorant_italic/Cormorant-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/web_fonts_woff/cormorant/web_fonts/cormorant_italic/Cormorant-Italic-webfont.woff') format('woff'),
+         url('webfonts/web_fonts_woff/cormorant/web_fonts/cormorant_italic/Cormorant-Italic-webfont.ttf') format('truetype'),
+         url('webfonts/web_fonts_woff/cormorant/web_fonts/cormorant_italic/Cormorant-Italic-webfont.svg#cormorantitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'jenriv_titlinglight';
+    src: url('webfonts/web_fonts_woff/jenriv/jenrivtitling-light-webfont.woff2') format('woff2'),
+         url('webfonts/web_fonts_woff/jenriv/jenrivtitling-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.card {
+    border-radius: 0 !important;
+    width: 50vmax;
+    animation: slide-left;
+    animation-duration: 1s;
+}
+
+.event_data {
+    font-family: 'cormorantmedium' !important;
+    font-size: 1.1rem !important;
+}
+
+#date {
+    font-family: 'jenriv_titlinglight' !important;
+}
+
+#place {
+    font-family: 'cormorantitalic' !important;
+}
+
+#white_block {
+    width: 50vmax;
+    animation: slide-left;
+    animation-duration: 1s;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(500%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

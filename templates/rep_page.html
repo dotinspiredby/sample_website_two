@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='base.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='repertoire.css')}}">
+<script src="{{url_for('static', filename='copy_text.js')}}" type="text/javascript"></script>
+{% endblock %}
+
+
+{% block title %} Repertoire · Artist Name {% endblock %}
+
+{% block content %}
+<br>
+
+<style type="text/css">
+body {
+    background:{{ 'url(' + url_for('static', filename='cover_images/3.jpg') + ')' }};
+    }
+</style>
+<div id="white_block">
+<h1 class="text"> Repertoire </h1>
+    <ul class="nav nav-tabs" id="navigation">
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="#solo">Solo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#piano_duo">With Piano</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#with_orchestra">With Orchestra</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#chamber">Chamber Works</a>
+      </li>
+    </ul>
+
+    <div id="text-stuff">
+        <br>
+        <p>(click on piece in order to copy it)</p>
+        <div id="solo">
+            <br>
+            <h2 class="text"> Solo Works </h2>
+            {% for piece in solo %}
+            <div class="piece" id="{{'solo_' + piece.id|string}}" onclick="javascript:copyText('{{'solo_' + piece.id|string}}')">
+                {{piece.composer}} - {{piece.title}}
+            </div>
+            {% endfor %}
+        </div>
+        <div id="piano_duo">
+            <br>
+            <h2 class="text"> Works For INSTRUMENT & Piano </h2>
+            {% for piece in with_piano %}
+            <div class="piece" id="{{'w_piano_' + piece.id|string}}" onclick="javascript:copyText('{{'w_piano_' + piece.id|string}}')">
+                {{piece.composer}} - {{piece.title}}
+            </div>
+            {% endfor %}
+        </div>
+        <div id="with_orchestra">
+            <br>
+            <h2 class="text"> Works For INSTRUMENT & Orchestra </h2>
+            {% for piece in with_orchestra %}
+            <div class="piece" id="{{'w_orch_' + piece.id|string}}" onclick="javascript:copyText('{{'w_orch_' + piece.id|string}}')">
+                {{piece.composer}} - {{piece.title}}
+            </div>
+            {% endfor %}
+        </div>
+        <div id="chamber">
+            <br>
+            <h2 class="text"> Chamber Music Works </h2>
+            {% for piece in chamber %}
+            <div class="piece" id="{{'chamber_' + piece.id|string}}" onclick="javascript:copyText('{{'chamber_' + piece.id|string}}')">
+                {{piece.composer}} - {{piece.title}}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+{% endblock %}

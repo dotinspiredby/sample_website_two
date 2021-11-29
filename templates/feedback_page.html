@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='base.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='feedback.css')}}">
+{% endblock %}
+
+{% block title %} Feedback · Artist Name {% endblock %}
+
+{% block content %}
+
+{% if notification %}
+  <div class="alert alert-success" role="alert">
+  {{notification}}
+  </div>
+{% endif %}
+<br>
+
+<style type="text/css">
+body {
+    background: {{ 'url(' + url_for('static', filename='cover_images/7.jpg') + ')' }};
+    }
+</style>
+<div id="white_block">
+<h1 class="text">Feedback Form</h1>
+<form class="form-horizontal" method="POST" action="/feedback">
+        <br>
+        <h2> Send the message using the following form </h2>
+        {{ form.csrf_token() }}
+        <div class="form-group">
+            <div class="label">
+                {{ form.email.label }}
+            </div>
+            {{ form.email(class="form-control", placeholder="name@example.com") }}
+        </div>
+    <br>
+        <div class="form-group">
+            <div class="label">
+                {{ form.subject.label }}
+            </div>
+            {{ form.subject(class="form-control", placeholder="Subject") }}
+        </div>
+    <br>
+        <div class="form-group">
+            <div class="label">
+                {{ form.text.label }}
+            </div>
+            {{ form.text(class="form-control") }}
+        </div>
+    <br>
+        <div class="form-group" id="button">
+            {{ form.submit(class="form-control btn")}}
+        </div>
+</form>
+
+</div>
+{% endblock %}

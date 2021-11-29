@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='base.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='events.css')}}">
+{% endblock %}
+
+{% block title %} Events · Artist Name {% endblock %}
+
+{% block content %}
+<br>
+
+<style type="text/css">
+body {
+    background: {{ 'url(' + url_for('static', filename='cover_images/4.jpg') + ')' }};
+
+    }
+</style>
+<div id="white_block">
+<h1 class="text"> Concerts & Events </h1>
+    <div id="event_data">
+
+        {% for event in events %}
+
+            <div id="event">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="event_data" id="date"> {{ event.date.strftime('%d %B %Y, %I.%M %p') }} </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="card-title">
+                        <div class="event_data" id="place">{{ event.location }}</div>
+                    </div>
+                    <div class="card-text">
+                        <div class="event_data" id="repertoire">{{ event.description }}</div>
+                    </div>
+                      <br>
+                    <a id="button" href="{{ event.ticket_link }}" class="btn">Ticket Link</a>
+                  </div>
+                </div>
+            </div>
+        <br>
+        {% endfor %}
+
+    </div>
+
+</div>
+{% endblock %}

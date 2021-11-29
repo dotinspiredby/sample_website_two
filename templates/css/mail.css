@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'cormorantmedium';
+    src: url('webfonts/web_fonts_woff/cormorant/web_fonts/cormorant_medium/Cormorant-Medium-webfont.eot');
+    src: url('webfonts/web_fonts_woff/cormorant/web_fonts/cormorant_medium/Cormorant-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+
+         url('webfonts/web_fonts_woff/cormorant/web_fonts/cormorant_medium/Cormorant-Medium-webfont.woff') format('woff'),
+         url('webfonts/web_fonts_woff/cormorant/web_fonts/cormorant_medium/Cormorant-Medium-webfont.ttf') format('truetype'),
+         url('webfonts/web_fonts_woff/cormorant/web_fonts/cormorant_medium/Cormorant-Medium-webfont.svg#cormorantmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'jenriv_titlinglight_italic';
+    src: url('webfonts/web_fonts_woff/jenriv/jenrivtitling-lightitalic-webfont.woff2') format('woff2'),
+         url('webfonts/web_fonts_woff/jenriv/jenrivtitling-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h3 {
+    font-size: 20px;
+    font-family: 'jenriv_titlinglight_italic';
+}
+
+p {
+    font-family: 'cormorantmedium' !important;
+}

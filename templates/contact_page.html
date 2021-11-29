@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='base.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='contacts.css')}}">
+{% endblock %}
+
+{% block title %} Contacts · Artist Name  {% endblock %}
+
+
+{% block content %}
+<br>
+
+<style type="text/css">
+body {
+    background:{{ 'url(' + url_for('static', filename='cover_images/6.jpg') + ')' }};
+    }
+</style>
+<div id="white_block">
+<h1 class="text"> Contact Information </h1>
+                <div id="contacts">
+                    <h2 class="text"> For inquiries and suggestions please contact </h2>
+                        <div id="contact-stuff">
+                            {% for contact in contacts %}
+                            <div id="contact_person">
+                                {{contact.contact_person}}
+                            </div>
+                            <div id="phone_data">
+                                <div class="phone_number">
+                                {{contact.phone_number}}
+                                </div>
+                                {% if contact.phone_number_optional %}
+                                <div class="phone_number">
+                                {{contact.phone_number_optional}}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div id="email_data">
+
+                                <div id="email1"> {{contact.e_mail}}</div>
+                                {% if contact.e_mail_optional %}
+                                <div id="email2"> {{contact.e_mail_optional}} </div>
+                                {% endif %}
+                            </div>
+                        {% if contact.whatsapp_number_optional %}
+                            <a href="{{'https://api.whatsapp.com/send/?phone=' + contact.whatsapp_number_optional}}">
+                                <img src="{{url_for('static', filename='icons/whatsapp.png')}}" height="40" width="40">
+                            </a>
+                        {% endif %}
+                            <br><br>
+                            {% endfor %}
+                        </div>
+                    <br>
+                    <div id="youtube">
+                        <script src="https://apis.google.com/js/platform.js"></script>
+                        <div class="g-ytsubscribe" data-channel="GoogleDevelopers" data-layout="full" data-count="default"></div>
+                    </div>
+
+
+                </div>
+
+</div>
+{% endblock %}
+
+
+
