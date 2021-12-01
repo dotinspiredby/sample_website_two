@@ -3,3 +3,4 @@ function copyText(id) {
     navigator.clipboard.writeText(text.innerText);
     alert("Copied To Clipboard");
 }
+

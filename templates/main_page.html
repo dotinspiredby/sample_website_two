@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 
 {% block extra_css %}
-<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='base.css')}}">
-<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
 {% endblock %}
 
 {% block title %} Main · Artist Name  {% endblock %}
@@ -10,10 +9,12 @@
 {% block content %}
 <style type="text/css">
 body {
+
+  background:{{ 'url(' + url_for('static', filename='cover_images/1.jpg') + ')' }};
 /*
-    background:{{ 'url(' + url_for('static', filename='cover_images/1.jpg') + ')' }};
+  background: url('https://drive.google.com/uc?export=view&id=1yHgPHuAB7JxtQW7lhaCgpHYnSM0G16t2');
 */
-    background: url('https://drive.google.com/uc?export=view&id=1yHgPHuAB7JxtQW7lhaCgpHYnSM0G16t2');
+
     }
 </style>
 

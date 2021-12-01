@@ -2,8 +2,7 @@
 
 
 {% block extra_css %}
-<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='base.css')}}">
-<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='events.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/events.css')}}">
 {% endblock %}
 
 {% block title %} Events · Artist Name {% endblock %}
@@ -13,10 +12,12 @@
 
 <style type="text/css">
 body {
+
+  background: {{ 'url(' + url_for('static', filename='cover_images/4.jpg') + ')' }};
 /*
-    background: {{ 'url(' + url_for('static', filename='cover_images/4.jpg') + ')' }};
+  background: url('https://drive.google.com/uc?export=view&id=17ZDopKs43W09eK08rOZGtr5nqJqQtwlO');
 */
-    background: url('https://drive.google.com/uc?export=view&id=17ZDopKs43W09eK08rOZGtr5nqJqQtwlO');
+
     }
 </style>
 <div id="white_block">
