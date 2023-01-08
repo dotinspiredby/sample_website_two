@@ -112,3 +112,19 @@ p {
     animation: slide-up;
     animation-duration: 1s;
 }
+
+
+background: {
+    animation: opacity;
+    animation-duration: 3s;
+}
+
+@keyframes opacity {
+    from {
+    opacity: 0;
+  }
+    to {
+    opacity: 100%;
+  }
+}
+
