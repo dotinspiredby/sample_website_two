@@ -21,7 +21,7 @@ iframe {
 }
 
 #white_block {
-    width: 50vmax;
+    width: 100%;
     animation: slide-left;
     animation-duration: 1s;
 }

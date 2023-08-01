@@ -32,7 +32,7 @@
 
 .card {
     border-radius: 0 !important;
-    width: 50vmax;
+    width: 100vmin;
     animation: slide-left;
     animation-duration: 1s;
 }
@@ -51,7 +51,7 @@
 }
 
 #white_block {
-    width: 50vmax;
+    width: 100vmin;
     animation: slide-left;
     animation-duration: 1s;
 }

@@ -12,13 +12,13 @@
 
 
 #white_block {
-    width: 50vmax;
+    width: 100vmin;
     animation: slide-left;
     animation-duration: 1s;
 }
 
 #navigation {
-    width: 50vmax;
+    width: 100vmin;
     animation: slide-left;
     animation-duration: 1s;
 
@@ -26,7 +26,7 @@
 
 #text-stuff {
     font-family: 'cormorantmedium' !important;
-    width: 50vmax;
+    width: 98%;
     animation: slide-left;
     animation-duration: 1s;
     padding-bottom: 6%;

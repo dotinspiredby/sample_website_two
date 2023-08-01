@@ -12,7 +12,7 @@
 }
 
 #navigation {
-    width: 50vmax;
+    width: 100vmin;
     animation: slide-up;
     animation-duration: 1s;
 
@@ -30,7 +30,7 @@ h2 {
 }
 
 #white_block {
-    width: 50vmax;
+    width: 100vmin;
     animation: slide-up;
     animation-duration: 1s;
 }

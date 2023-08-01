@@ -113,7 +113,11 @@ p {
     animation-duration: 1s;
 }
 
+*style {
+    animation: opacity;
+    animation-duration: 2s;
 
+}
 
 @keyframes opacity {
     from {
@@ -123,4 +127,6 @@ p {
     opacity: 100%;
   }
 }
+
+
 
